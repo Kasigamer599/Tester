@@ -5,10 +5,10 @@ module.exports={
     category: 'special',
     description: 'Giveaway command',
     run: async(bot,message,args)=>{
-  if (!args[0]) return message.channel.send('❌ ?giveaway <time> <gift>');
+  if (!args[0]) return message.channel.send('❌  r-giveaway <time> <gift>');
     if ( !args[0].endsWith("h") && !args[0].endsWith("m") && !args[0].endsWith("s")) return message.channel.send('You can only use m/h/s for the giveaway time');
     const gift = args.slice(1).join(" ");
-    if (!gift) return message.channel.send('❌ ?giveaway <time> <gift>');
+    if (!gift) return message.channel.send('❌  r-giveaway <time> <gift>');
     const giftembed = new MessageEmbed()
       .setTitle(`**${gift}**`)
       .setDescription(`React with 🎁 to enter`)
